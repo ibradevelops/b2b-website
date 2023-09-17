@@ -1,0 +1,31 @@
+.support__section {
+  padding-block: 8rem;
+  background-color: $red-light-color;
+  &-sub-title {
+    @include sectionLabel;
+    text-align: center;
+    color: $red-dark-color;
+    margin-bottom: 8rem;
+  }
+  &-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      flex-basis: 50%;
+      &-title {
+        font-size: 3.2rem;
+        color: $grey-color;
+      }
+      &-text {
+        color: $grey-color;
+        font-size: 1.6rem;
+        letter-spacing: 0.17rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}

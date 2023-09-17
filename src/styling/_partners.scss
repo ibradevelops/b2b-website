@@ -1,0 +1,22 @@
+.partners__section {
+  padding-block: 8rem;
+  border-top: 0.05rem solid rgba($grey-color, 0.2);
+
+  background-color: white;
+  &-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 4rem;
+    &-photo {
+      width: auto;
+      height: 5rem;
+    }
+  }
+  &-title {
+    @include sectionLabel;
+    color: $red-dark-color;
+    margin-bottom: 8rem;
+    text-align: center;
+  }
+}

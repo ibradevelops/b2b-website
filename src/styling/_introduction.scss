@@ -1,0 +1,19 @@
+.introduction__section {
+  padding-block: 16rem;
+  background-image: linear-gradient(
+      rgba($grey-color, 0.9),
+      rgba($grey-color, 0.9)
+    ),
+    url("../images/background.jpg");
+  background-size: cover;
+  color: white;
+  text-align: center;
+  &-text {
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    line-height: 1.6;
+    width: 75%;
+    margin-inline: auto;
+  }
+}

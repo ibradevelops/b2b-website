@@ -1,0 +1,39 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: $grey-color;
+  display: flex;
+  justify-content: center;
+  padding-block: 2rem;
+  justify-content: space-between;
+
+  img {
+    height: 6rem;
+    width: auto;
+  }
+  &-menu {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 7rem;
+    &-item {
+      color: white;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:hover,
+      &:active {
+        color: $red-dark-color;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

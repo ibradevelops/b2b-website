@@ -1,0 +1,93 @@
+.hide {
+  opacity: 0 !important;
+}
+//
+
+.opacityAnimation {
+  animation: opacityAnimation 2s;
+}
+
+.blurAnimation {
+  animation: blurAnimation 2s;
+}
+
+.fromUpAnimation {
+  animation: fromUpAnimation 2s;
+  animation-fill-mode: backwards;
+}
+
+.fromBottomAnimation {
+  animation: fromBottomAnimation 2s;
+  animation-fill-mode: backwards;
+}
+
+.fromLeftAnimation {
+  animation: fromLeftAnimation 2s;
+  animation-fill-mode: backwards;
+}
+
+.fromRightAnimation {
+  animation: fromRightAnimation 2s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blurAnimation {
+  0% {
+    filter: blur(1rem);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
+@keyframes fromUpAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottomAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromLeftAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fromRightAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

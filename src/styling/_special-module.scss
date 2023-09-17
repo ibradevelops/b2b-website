@@ -1,0 +1,16 @@
+.specialModues__section-items-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  &-img {
+    height: 8rem;
+    width: auto;
+  }
+  &-title {
+    font-size: 2.2rem;
+    color: $grey-color;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+  }
+}

@@ -1,0 +1,17 @@
+.specialModules__section {
+  padding-block: 8rem;
+  background-color: #fce8e7;
+  &-title {
+    text-align: center;
+    color: $red-dark-color;
+    margin-bottom: 8rem;
+    @include sectionLabel;
+  }
+
+  &-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+  }
+}

@@ -1,0 +1,53 @@
+.singleArea__item {
+  padding: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 0 1rem;
+  color: $grey-color;
+  border-radius: 0.6rem;
+  transition: all 0.2s;
+  position: relative;
+  &:hover {
+    background-color: $red-light-color;
+  }
+
+  &-figure {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 75%;
+    margin-bottom: 4rem;
+
+    &-img {
+      align-self: flex-start;
+      height: 10rem;
+      width: auto;
+    }
+    &-caption {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    &-text {
+      font-size: 1.4rem;
+      opacity: 0.8;
+    }
+  }
+  &-link {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: $red-dark-color;
+    font-weight: bold;
+    bottom: 2rem;
+    left: 2rem;
+    cursor: pointer;
+    &:hover .singleArea__item-icon {
+      transform: translateX(0.8rem);
+    }
+  }
+  &-icon {
+    transition: all 0.2s;
+    width: 1.5rem;
+    height: auto;
+  }
+}

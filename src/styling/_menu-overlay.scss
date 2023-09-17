@@ -1,0 +1,40 @@
+.menu__overlay {
+  height: 100vh;
+  background-color: $grey-color;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  &-images {
+    display: flex;
+    justify-content: space-between;
+    &-icon {
+      height: 6rem;
+      width: auto;
+    }
+  }
+  &-list {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    &-item {
+      font-size: 3.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      word-spacing: 0.15rem;
+      font-weight: bold;
+      width: 50rem;
+      &:not(:last-child) {
+        margin-bottom: 6rem;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        &:active {
+          color: $red-dark-color;
+        }
+      }
+    }
+  }
+}
