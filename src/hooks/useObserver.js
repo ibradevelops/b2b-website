@@ -19,15 +19,16 @@ function useObserver() {
         } else {
           return;
         }
-        observer.unobserve(entry.target);
       },
       { root: null, threshold: 0.2 }
     );
 
     const observedElement = element.current;
-
-    return () => observer.observe(observedElement);
+    observedElement && observer.observe(observedElement);
+    //
+    return () => observedElement && observer.disconnect();
   }, []);
+
   return { element, visibility, animate };
 }
 
