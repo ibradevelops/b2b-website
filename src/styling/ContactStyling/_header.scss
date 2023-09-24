@@ -1,0 +1,31 @@
+.contact {
+  background-color: white;
+  color: $grey-color;
+  padding: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  &__main {
+    display: flex;
+    gap: 6rem;
+  }
+  &__header {
+    position: relative;
+    &-title {
+      font-size: 3.2rem;
+      letter-spacing: 0.1rem;
+    }
+    &-sub-title {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-block: 0.8rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0.2rem;
+      width: 2rem;
+      background-color: $red-dark-color;
+    }
+  }
+}

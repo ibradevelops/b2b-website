@@ -1,0 +1,282 @@
+// 1310px
+@media (max-width: 82em) {
+  .menu__overlay {
+    padding-inline: 4rem;
+  }
+  .nav {
+    padding-inline: 4rem;
+    display: flex;
+    align-items: flex-end;
+    &__logo {
+      height: 8rem;
+    }
+
+    &__list {
+      display: none;
+    }
+    &-menu {
+      display: block;
+    }
+  }
+  .intro__section {
+    flex-direction: column;
+    &-text {
+      align-items: center;
+      &-bio {
+        text-align: center;
+      }
+    }
+    &-photo {
+      display: none;
+    }
+    &-scroll {
+      display: none;
+    }
+  }
+}
+// 1184px
+@media (max-width: 74em) {
+  html {
+    font-size: 56.5%;
+  }
+
+  .menu__overlay-list {
+    top: 55%;
+  }
+
+  .specialModules__section-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .specialModues__section-items-figure:last-child {
+    grid-column: -4/-1;
+  }
+
+  .whoAreWe__section {
+    &-box {
+      flex-direction: column;
+      text-align: center;
+      gap: 2.8rem;
+      &-text {
+        p {
+          margin-bottom: 1.4rem !important;
+          margin-inline: auto;
+        }
+      }
+      &-label {
+        &::after {
+          content: "";
+          display: none;
+        }
+        &-title {
+          position: static;
+          text-align: center;
+          margin-bottom: 2.8rem;
+        }
+      }
+    }
+  }
+  .areaApplication__section-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// 1032px
+@media (max-width: 64.5em) {
+  .results__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &-line {
+      display: none;
+    }
+    &-single:last-child {
+      grid-column: 3/1;
+    }
+  }
+  .implementation__section {
+    &-text {
+      font-size: 2.6rem;
+    }
+  }
+  .main-btn {
+    width: 26rem;
+  }
+}
+
+// 944px
+@media (max-width: 59em) {
+  html {
+    font-size: 52%;
+  }
+  .partners__section {
+    &-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 6rem;
+      column-gap: 0;
+    }
+  }
+}
+
+// 820px
+@media (max-width: 51.25rem) {
+  .intro__section {
+    &-text {
+      gap: 1.2rem;
+      &-bio {
+        width: 100%;
+      }
+    }
+  }
+  .specialModules__section-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .specialModues__section-items-figure:last-child {
+    grid-column: initial;
+  }
+  .implementation__section-text {
+    font-size: 2.4rem;
+  }
+}
+// 760px
+@media (max-width: 47.5em) {
+  .intro__section-text-title {
+    font-size: 5.2rem;
+  }
+  .areaApplication__section {
+    overflow: hidden;
+    &-items {
+      grid-template-columns: repeat(2, 1fr);
+      align-content: center;
+    }
+  }
+  .results__section {
+    display: flex;
+    flex-direction: column;
+  }
+  .support__section {
+    padding-block: 6rem;
+    &-sub-title {
+      margin-bottom: 6rem;
+    }
+    &-box {
+      flex-direction: column;
+      width: 75%;
+      gap: 2.4rem;
+      margin-inline: auto;
+      text-align: center;
+      &-left {
+        gap: 2.4rem;
+      }
+    }
+  }
+  .introduction__section-text {
+    width: 85%;
+  }
+}
+
+// 600px
+@media (max-width: 37.5rem) {
+  html {
+    font-size: 48%;
+  }
+  .menu__overlay-images-icon {
+    height: 8rem;
+  }
+  .nav img {
+    height: 8rem;
+  }
+  .intro__section-text-title {
+    font-size: 4.2rem;
+  }
+  .support__section-box {
+    gap: 3.2rem;
+    &-left {
+      gap: 3.2rem;
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 6rem;
+    &__right-box {
+      align-items: center;
+      text-align: center;
+      gap: 6rem;
+      &-first-list,
+      &-second-list {
+        gap: 3.2rem;
+      }
+    }
+  }
+}
+
+// 480px
+@media (max-width: 30em) {
+  .menu__overlay-list-item {
+    font-size: 2rem;
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .intro__section-text-title {
+    font-size: 3.6rem;
+  }
+  .areaApplication__section {
+    &-items {
+      display: flex;
+      flex-direction: column;
+    }
+    &-title {
+      font-size: 2.6rem;
+    }
+  }
+  .singleArea__item-figure {
+    width: 100%;
+  }
+  .specialModules__section-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+  .implementation__section {
+    text-align: center;
+    align-items: center;
+    gap: 2rem;
+    &-text {
+      &::after {
+        content: "";
+        display: none;
+      }
+      margin-left: 0;
+    }
+    & button {
+      margin-left: 0;
+    }
+  }
+
+  .partners__section-gallery img {
+    height: 4rem;
+  }
+}
+
+// 390px
+@media (max-width: 24.375em) {
+  html {
+    font-size: 44%;
+  }
+  .intro__section-text {
+    gap: 2.4rem;
+    &-title {
+      font-size: 2.8rem;
+    }
+  }
+  .areaApplication__section {
+    &-title {
+      font-size: 2.4rem;
+    }
+  }
+  .implementation__section-text {
+    margin-left: 5rem;
+  }
+}

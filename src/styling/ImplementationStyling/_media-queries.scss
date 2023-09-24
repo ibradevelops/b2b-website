@@ -1,0 +1,27 @@
+// 600px
+@media (max-width: 37.5em) {
+  .implementation__text-box {
+    padding-inline: 8rem;
+    &-container {
+      &-single {
+        font-size: 2rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// 420px
+
+@media (max-width: 26.25em) {
+  .implementation__header-box {
+    &-title {
+      font-size: 5.6rem;
+    }
+  }
+  .implementation__text-box {
+    &-title {
+      font-size: 2.8rem;
+    }
+  }
+}

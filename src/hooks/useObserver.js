@@ -4,7 +4,7 @@ function useObserver() {
   const [interacting, setInteracting] = useState(false);
   const element = useRef(null);
   //
-  const visibility = !interacting ? "hide" : "";
+  const visibility = !interacting ? "hide-section" : "";
   function animate(parametar) {
     if (interacting) return parametar;
     else return "";

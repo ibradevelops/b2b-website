@@ -1,0 +1,44 @@
+.implementation {
+  color: $grey-color;
+  background-color: white;
+  &__text {
+    &-img {
+      width: 100%;
+      margin-block: 2rem;
+    }
+    &-box {
+      padding: 4rem 12rem;
+      &:last-child {
+        padding-bottom: 0;
+      }
+      &-title {
+        position: relative;
+        color: $red-dark-color;
+        font-size: 3.2rem;
+        letter-spacing: 0.34rem;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: $red-dark-color;
+          width: 2rem;
+          height: 0.15rem;
+          left: 0;
+          bottom: -0.5rem;
+        }
+      }
+      &-container {
+        &-single {
+          font-size: 1.8rem;
+          letter-spacing: 0.2rem;
+          line-height: 1.3;
+          opacity: 0.9;
+          &:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

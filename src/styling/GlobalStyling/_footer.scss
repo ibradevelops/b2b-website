@@ -1,0 +1,79 @@
+.footer {
+  padding-block: 8rem;
+  display: flex;
+  justify-content: space-around;
+  &__left-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    &-image {
+      height: 6rem;
+      width: auto;
+    }
+    &-title {
+      font-size: 2.4rem;
+      color: white;
+      letter-spacing: 0.1rem;
+    }
+  }
+  &__right-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    &-first {
+      &-title {
+        @include sectionLabel;
+        color: white;
+      }
+      &-list {
+        margin-block: 1.5rem;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        &-item {
+          width: fit-content;
+          text-underline-offset: 0.3rem;
+          font-size: 1.6rem;
+          letter-spacing: 0.1rem;
+          color: $red-dark-color;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+      &-address {
+        font-size: 1.4rem;
+        letter-spacing: 0.08rem;
+        color: #565656;
+      }
+    }
+    &-second {
+      &-title {
+        margin-bottom: 1.5rem;
+        @include sectionLabel;
+        color: white;
+      }
+      &-list {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        &-item {
+          text-decoration: none;
+          font-size: 1.6rem;
+          letter-spacing: 0.1rem;
+          color: #a0a0a0;
+          transition: all 0.2s;
+          cursor: pointer;
+          &:hover,
+          &:active {
+            color: $red-dark-color;
+            text-decoration: underline;
+            text-underline-offset: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+}

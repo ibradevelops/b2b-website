@@ -1,0 +1,11 @@
+// 1000px
+
+@media (max-width: 62.5em) {
+  .login__form-box {
+    gap: 4rem;
+    & input,
+    & button {
+      width: calc(100% + 10rem);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-basis: 50%;
+  .contact__form-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    & input {
+      @include contactInput;
+      width: 50%;
+    }
+  }
+  &-text-area {
+    height: 20rem;
+    width: 100%;
+    resize: none;
+    @include contactInput;
+  }
+  // button
+  & button {
+    width: 100%;
+    border: 0.2rem solid $red-dark-color;
+    &:hover,
+    &:active {
+      background-color: transparent;
+      color: $red-dark-color;
+    }
+  }
+}

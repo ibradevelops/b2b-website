@@ -1,0 +1,12 @@
+.area__text {
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: $grey-color;
+  &:first-child {
+    margin-bottom: 3.2rem;
+  }
+  &:last-child {
+    margin-top: 3.2rem;
+  }
+}

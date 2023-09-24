@@ -1,0 +1,80 @@
+.area__questions {
+  padding: 8rem 12rem;
+  padding-top: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  &-single {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    //
+
+    &-number {
+      font-size: 1.4rem;
+      padding: 1rem;
+      border: 0.2rem solid rgba($grey-color, 0.2);
+      border-radius: 50%;
+      color: $red-dark-color;
+      background-color: white;
+      z-index: 3;
+    }
+
+    &-text {
+      color: $grey-color;
+      font-size: 2.8rem;
+    }
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 4rem;
+      left: 1.9rem;
+      width: 0.2rem;
+      height: 8.6rem;
+      background-image: linear-gradient(
+        rgba($grey-color, 0.5) 0%,
+        rgba($grey-color, 0.5) 5%,
+        white 5%,
+        white 10%,
+        rgba($grey-color, 0.5) 10%,
+        rgba($grey-color, 0.5) 15%,
+        white 15%,
+        white 20%,
+        rgba($grey-color, 0.5) 20%,
+        rgba($grey-color, 0.5) 25%,
+        white 25%,
+        white 30%,
+        rgba($grey-color, 0.5) 30%,
+        rgba($grey-color, 0.5) 35%,
+        white 35%,
+        white 40%,
+        rgba($grey-color, 0.5) 40%,
+        rgba($grey-color, 0.5) 45%,
+        white 45%,
+        white 50%,
+        rgba($grey-color, 0.5) 50%,
+        rgba($grey-color, 0.5) 55%,
+        white 55%,
+        white 60%,
+        rgba($grey-color, 0.5) 60%,
+        rgba($grey-color, 0.5) 65%,
+        white 65%,
+        white 70%,
+        rgba($grey-color, 0.5) 70%,
+        rgba($grey-color, 0.5) 75%,
+        white 75%,
+        white 80%,
+        rgba($grey-color, 0.5) 80%,
+        rgba($grey-color, 0.5) 85%,
+        white 85%,
+        white 90%,
+        rgba($grey-color, 0.5) 90%,
+        rgba($grey-color, 0.5) 95%,
+        white 95%,
+        white 100%
+      );
+    }
+  }
+}

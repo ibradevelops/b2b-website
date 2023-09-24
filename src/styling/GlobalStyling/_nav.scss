@@ -1,0 +1,58 @@
+.nav {
+  background-color: $grey-color !important;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: $grey-color;
+  display: flex;
+  justify-content: center;
+  padding-block: 2rem;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+  }
+  //
+  &__logo {
+    height: 6rem;
+    width: auto;
+  }
+  &-menu {
+    display: none;
+    height: 8rem;
+    width: auto;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 7rem;
+    &-item {
+      color: white;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+      &:hover,
+      &:active {
+        color: $red-dark-color;
+        transform: scale(1.1);
+      }
+      &-icon {
+        height: 1rem;
+        width: auto;
+      }
+    }
+  }
+}
+
+//
+
+.flex-icon {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}

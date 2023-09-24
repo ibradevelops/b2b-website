@@ -1,0 +1,15 @@
+@mixin sectionLabel {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-weight: bold;
+}
+
+@mixin contactInput {
+  border: 1px solid rgba($grey-color, 0.5);
+  outline: none;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.6rem 0 rgba($grey-color, 0.4);
+}

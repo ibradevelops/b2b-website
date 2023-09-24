@@ -1,0 +1,14 @@
+.area__list {
+  margin-left: 3.2rem;
+  &-single {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    color: $grey-color;
+    &::marker {
+      color: $red-dark-color;
+    }
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+  }
+}

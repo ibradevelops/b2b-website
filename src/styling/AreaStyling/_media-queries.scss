@@ -1,0 +1,86 @@
+// 980px
+
+@media (max-width: 61.25em) {
+  .area__intro {
+    text-align: center;
+  }
+  .area__box {
+    width: 84rem;
+  }
+}
+
+// 820px
+
+@media (max-width: 51.25em) {
+  .area__box {
+    width: 72rem;
+    padding: 2rem 4rem;
+    gap: 3rem;
+    &-text {
+      font-size: 2.2rem;
+    }
+  }
+  .area__questions {
+    &-single {
+      &-text {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}
+
+// 680px
+
+@media (max-width: 42.5em) {
+  .area__questions {
+    padding-top: 12rem;
+  }
+  .area__box {
+    width: 58rem;
+    gap: 2rem;
+    &-text {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+// 580px
+
+@media (max-width: 36.25em) {
+  .area__intro-title {
+    font-size: 5.6rem;
+  }
+  .area__box {
+    width: 50rem;
+    &-text {
+      font-size: 1.6rem;
+    }
+  }
+  .area__questions {
+    padding-inline: 8rem;
+  }
+}
+
+// 480px
+
+@media (max-width: 30em) {
+  .area__questions,
+  .area__content,
+  .areaApplication__section-items {
+    padding-inline: 6rem;
+  }
+}
+
+// 380px
+
+@media (max-width: 23.75em) {
+  .area__box {
+    width: 44rem;
+  }
+  .area__intro-sub-title {
+    font-size: 2rem;
+  }
+  .area__questions-single-text {
+    font-size: 2rem;
+  }
+}

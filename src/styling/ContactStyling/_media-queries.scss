@@ -1,0 +1,21 @@
+// 860px
+
+@media (max-width: 53.75em) {
+  .contact {
+    padding-block: 12rem;
+    gap: 6rem;
+    &__header {
+      text-align: center;
+    }
+    &__main {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__info {
+      display: none;
+    }
+    &__form {
+      gap: 4rem;
+    }
+  }
+}

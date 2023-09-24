@@ -1,0 +1,32 @@
+.dropdown {
+  position: absolute;
+  top: 7rem;
+  left: 36.5rem;
+  color: white;
+  font-size: 2rem;
+  z-index: 9999;
+  &__list {
+    list-style: none;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    //
+    &-item {
+      a {
+        padding: 1rem 2rem;
+        letter-spacing: 0.08rem;
+        display: block;
+        font-size: 1.6rem;
+        transition: all 0.2s;
+        cursor: pointer;
+        color: $grey-color;
+        text-decoration: none;
+        &:hover,
+        &:active {
+          background-color: $red-dark-color;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.area__characteristic {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  &-text {
+    color: $grey-color;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.6;
+  }
+}
