@@ -1,5 +1,5 @@
 // hooks
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // layouts
 import AppLayout from "./layouts/AppLayout.js";
@@ -40,46 +40,60 @@ import AreaServicesLogo from "./images/odrzavanje.svg";
 import ImplementationLayout from "./layouts/ImplementationLayout.js";
 import ContactLayout from "./layouts/ContactLayout.js";
 import LoginLayout from "./layouts/LoginLayout.js";
-import MenuLayout from "./layouts/MenuLayout.js";
 
 //
 function App() {
   const [toggleDropdown, setToggleDropdown] = useState(false);
-  const referenca = useRef(null);
+  const [toggleHamburger, setToggleHamburger] = useState(false);
 
-  const handleClick = useCallback(
-    (e) => {
-      if (e.currentTarget === referenca.current) {
-        e.stopPropagation();
-        setToggleDropdown((toggle) => !toggle);
-      } else {
+  useEffect(
+    function () {
+      function closeDropdown() {
+        if (!toggleDropdown) return;
         setToggleDropdown(false);
       }
+
+      document.addEventListener("click", closeDropdown);
+      return () => document.removeEventListener("click", closeDropdown);
     },
-    [referenca]
+    [toggleDropdown]
   );
 
-  useEffect(() => {
-    document.addEventListener("click", handleClick);
+  useEffect(
+    function () {
+      function closeHamburger(e) {
+        const text = e.target.textContent.split(" ").at(0) === "Područja";
+        const img = e.target.tagName === "IMG";
 
-    return () => document.removeEventListener("click", handleClick);
-  }, [handleClick]);
+        if (!toggleHamburger || text || img) return;
+        setToggleHamburger(false);
+      }
+
+      document.addEventListener("click", closeHamburger);
+
+      return () => document.removeEventListener("click", closeHamburger);
+    },
+    [toggleHamburger]
+  );
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/menu" element={<MenuLayout />} />
         <Route
           element={
             <AppLayout
-              referenca={referenca}
               toggleDropdown={toggleDropdown}
-              onHandleClick={handleClick}
+              setToggleDropdown={setToggleDropdown}
+              toggleHamburger={toggleHamburger}
+              setToggleHamburger={setToggleHamburger}
             />
           }
         >
           <Route index path="/" element={<HomeLayout />} />
-          <Route path="/home" element={<HomeLayout />} />
+          <Route
+            path="/home"
+            element={<HomeLayout setToggleHamburger={setToggleHamburger} />}
+          />
           {/*  */}
           <Route
             path="/order"
@@ -126,9 +140,9 @@ function App() {
                 }
                 questions={[
                   "Znate li kad i šta treba isporučiti kupcu?",
-                  "Znate li u svakom trenutku stanje robe u Vašim trgovinama i koliko vremena trošite na prenos robe?",
-                  "Inventure su Vam problem?",
                   "Možete li tačno odrediti cijenu proizvoda?",
+                  "Inventure su Vam problem?",
+                  "Znate li u svakom trenutku stanje robe u Vašim trgovinama i koliko vremena trošite na prenos robe?",
                 ]}
                 textOne={""}
                 texts={[

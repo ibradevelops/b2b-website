@@ -1,5 +1,5 @@
 .singleArea__item {
-  padding: 2rem;
+  padding: 4rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0 0 1rem;
   color: $grey-color;
   border-radius: 0.6rem;
@@ -10,14 +10,15 @@
   }
 
   &-figure {
+    margin-inline: auto;
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: 75%;
     margin-bottom: 4rem;
+    width: 22.5rem;
 
     &-img {
-      align-self: flex-start;
       height: 10rem;
       width: auto;
     }
@@ -26,20 +27,20 @@
       font-weight: 600;
     }
     &-text {
+      text-align: center;
       font-size: 1.4rem;
       opacity: 0.8;
     }
   }
   &-link {
-    position: absolute;
-    display: inline-flex;
+    margin-inline: auto;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     font-size: 1.4rem;
     color: $red-dark-color;
     font-weight: bold;
-    bottom: 2rem;
-    left: 2rem;
     cursor: pointer;
     text-decoration: none;
     &:hover .singleArea__item-icon {

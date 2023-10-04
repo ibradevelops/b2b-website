@@ -1,62 +1,45 @@
-import { Link, useNavigate } from "react-router-dom";
-import Icon from "../images/close-icon.png";
-import Logo from "../images/logo.svg";
+import { Link } from "react-router-dom";
 import DropdownIcon from "../images/dropdown-white.png";
 import { useState } from "react";
 
 function MenuLayout() {
-  const navigate = useNavigate();
-  const [toggleDropdown, setToggleDropdown] = useState(false);
-
+  const [toggleBox, setToggleBox] = useState(false);
   return (
     <div className="menu__overlay">
-      <div className="menu__overlay-images">
-        <img className="menu__overlay-images-icon" alt="Logo" src={Logo} />
-        <img
-          className="menu__overlay-images-icon"
-          alt="Close icon"
-          src={Icon}
-          onClick={() => navigate(-1)}
-        />
-      </div>
       <ul className="menu__overlay-list">
-        <Link to="/home" className="menu__overlay-list-item">
-          <li>Početna</li>
+        <Link className="menu__overlay-list-single" to="/home">
+          Početna
         </Link>
-        <Link
-          className={`menu__overlay-list-item ${
-            toggleDropdown ? "toggle-dropdown-top" : ""
-          }`}
-          onClick={() => setToggleDropdown((toggle) => !toggle)}
-        >
-          <li>
+        <div onClick={() => setToggleBox((toggle) => !toggle)}>
+          <Link
+            className="menu__overlay-list-single"
+            style={{
+              marginBlock: toggleBox && "12rem",
+              position: "relative",
+              top: toggleBox && "-12rem",
+            }}
+          >
             Područja primjene
-            <img
-              src={DropdownIcon}
-              alt="Dropdown icon"
-              className={`${toggleDropdown ? "toggle-dropdown-rotate" : ""}`}
-            />
-          </li>
+          </Link>
+          <img src={DropdownIcon} alt="Dropdown icon" />
+          {toggleBox && <MenuOverlayBox />}
+        </div>
+        <Link className="menu__overlay-list-single" to="/implementation">
+          Implementacija
         </Link>
-        <Link to="/implementation" className="menu__overlay-list-item">
-          <li className={`${toggleDropdown ? "toggle-dropdown-margin" : ""}`}>
-            Implementacija
-          </li>
-        </Link>
-        <Link to="/contact" className="menu__overlay-list-item">
-          <li>Kontakt</li>
+        <Link className="menu__overlay-list-single" to="/contact">
+          Kontakt
         </Link>
         <Link
+          className="menu__overlay-list-single"
           to="http://77.78.198.63:5663/portal"
-          className="menu__overlay-list-item"
         >
-          <li>Help desk</li>
+          Help desk
         </Link>
-        <Link to="/login" className="menu__overlay-list-item">
-          <li>Log in</li>
+        <Link className="menu__overlay-list-single" to="/login">
+          Login
         </Link>
       </ul>
-      {toggleDropdown && <MenuOverlayBox />}
     </div>
   );
 }

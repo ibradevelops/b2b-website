@@ -3,7 +3,12 @@ import Navbar from "../components/GlobalComponents/Navbar";
 import Footer from "../components/GlobalComponents/Footer";
 import { useEffect } from "react";
 
-function AppLayout({ toggleDropdown, referenca, onHandleClick }) {
+function AppLayout({
+  toggleDropdown,
+  setToggleDropdown,
+  toggleHamburger,
+  setToggleHamburger,
+}) {
   const { pathname: url } = useLocation();
   const navigate = useNavigate();
   //
@@ -16,9 +21,10 @@ function AppLayout({ toggleDropdown, referenca, onHandleClick }) {
   return (
     <>
       <Navbar
-        referenca={referenca}
         toggleDropdown={toggleDropdown}
-        onHandleClick={onHandleClick}
+        setToggleDropdown={setToggleDropdown}
+        toggleHamburger={toggleHamburger}
+        setToggleHamburger={setToggleHamburger}
       />
       <Outlet />
       <Footer />

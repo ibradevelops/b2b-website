@@ -1,24 +1,24 @@
 .implementation__section {
   background-color: $red-dark-color;
-  padding-block: 8rem;
+  padding-block: 22rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
   &-title {
-    text-align: center;
+    text-align: left;
+    margin-left: 6rem;
     color: white;
     margin-bottom: 2.2rem;
     @include sectionLabel;
   }
   &-text {
-    font-size: 2.6rem;
+    font-size: 3.2rem;
     line-height: 4.6rem;
     letter-spacing: 0.1rem;
     font-weight: 800;
     color: white;
-    width: 80%;
-    margin-left: 7rem;
+    width: 75%;
     margin-bottom: 4rem;
+    margin-inline: auto;
     position: relative;
     &::after {
       content: "";
@@ -32,7 +32,7 @@
   }
   & button {
     border: 2px solid white;
-    margin-left: 7rem;
+    margin-left: 18rem;
     &:hover,
     &:active {
       background-color: white;

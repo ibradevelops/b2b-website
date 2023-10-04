@@ -5,6 +5,7 @@ import Header from "../components/ImplementationComponents/Header";
 import TextBox from "../components/ImplementationComponents/TextBox";
 
 import AreaApplicationItems from "../components/GlobalComponents/AreaApplicationItems";
+import AreaCarousel from "../components/AreaComponents/AreaCarousel";
 
 function ImplementationLayout() {
   useEffect(() => {
@@ -67,7 +68,8 @@ function ImplementationLayout() {
           Razvoj
         </TextBox>
       </div>
-      <AreaApplicationItems />
+      {/* <AreaApplicationItems /> */}
+      <AreaCarousel />
     </div>
   );
 }

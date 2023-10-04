@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap");
 
 *,
 *::before,
@@ -13,10 +13,10 @@ html {
 }
 
 body {
-  max-width: 128rem;
+  max-width: 150rem;
   margin-inline: auto;
   color: $grey-color;
   background-color: $grey-color;
-  overflow-x: hidden;
-  font-family: "Roboto", sans-serif;
+  overflow-x: hidden !important;
+  font-family: "Work Sans", sans-serif;
 }

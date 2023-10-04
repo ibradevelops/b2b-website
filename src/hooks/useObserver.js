@@ -17,12 +17,12 @@ function useObserver() {
         if (entry.isIntersecting) {
           setInteracting(true);
         } else {
+          // setInteracting(false);
           return;
         }
       },
       { root: null, threshold: 0.2 }
     );
-
     const observedElement = element.current;
     observedElement && observer.observe(observedElement);
     //

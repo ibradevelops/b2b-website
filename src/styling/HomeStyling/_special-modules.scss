@@ -2,9 +2,10 @@
   padding-block: 8rem;
   background-color: #fce8e7;
   &-title {
-    text-align: center;
+    text-align: left;
     color: $red-dark-color;
     margin-bottom: 8rem;
+    margin-left: 8rem;
     @include sectionLabel;
   }
 

@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
 import Button from "./Button.js";
 import Image from "../../images/image.svg";
+import Kruznice from "../../images/kruznice.svg";
 //
+
 function Intro() {
   return (
-    <header className="intro__section">
+    <header
+      className="intro__section"
+      style={{
+        backgroundImage: `url(${Kruznice})`,
+        backgroundPosition: "bottom",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="intro__section-text">
         <p className="intro__section-text-sub-title">
           ERP - Poslovni informacioni sistem IVIS
@@ -16,7 +25,7 @@ function Intro() {
           postizanja uspjeha: fleksibilnosti, brzine, efikasnosti i
           transparentnosti.
         </p>
-        <Link to="/contact">
+        <Link to="/contact" style={{ width: "fit-content" }}>
           <Button>Osjetite razliku</Button>
         </Link>
       </div>

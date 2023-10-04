@@ -1,13 +1,10 @@
 .nav {
+  padding-block: 2rem;
   background-color: $grey-color !important;
-  position: sticky;
-  top: 0;
-  z-index: 9;
-  background-color: $grey-color;
   display: flex;
   justify-content: center;
-  padding-block: 2rem;
-  justify-content: space-between;
+  gap: 32rem;
+
   a {
     text-decoration: none;
   }
@@ -16,10 +13,11 @@
     height: 6rem;
     width: auto;
   }
-  &-menu {
+  &-menu-img {
     display: none;
-    height: 8rem;
+    height: 3rem;
     width: auto;
+    cursor: pointer;
   }
 
   &__list {
@@ -39,7 +37,6 @@
       &:hover,
       &:active {
         color: $red-dark-color;
-        transform: scale(1.1);
       }
       &-icon {
         height: 1rem;
@@ -55,4 +52,8 @@
   gap: 1rem;
   display: flex;
   align-items: center;
+}
+
+.nav-unique-btn {
+  position: relative;
 }

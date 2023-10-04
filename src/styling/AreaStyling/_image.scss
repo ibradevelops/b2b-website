@@ -1,5 +1,6 @@
 .area__img {
-    object-fit: cover;
-    height: 35rem;
-    width: 100%;
+  object-fit: cover;
+  height: 35rem;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }

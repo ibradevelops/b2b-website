@@ -1,15 +1,22 @@
 .login {
-  padding-block: 8rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 8rem;
+  // &__background {
+  //   position: absolute;
+  //   object-fit: cover;
+  // }
   &__logo {
+    z-index: 333;
+    margin-top: -26rem;
     width: 15rem;
     height: auto;
   }
-
   &__form {
+    z-index: 333;
     text-align: center;
     &-sub-title {
       @include sectionLabel;
@@ -26,15 +33,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      gap: 3rem;
 
       & input {
+        font-family: inherit;
         border-radius: 0.5rem;
         border: none;
         outline: none;
-        width: 100%;
+        width: 175%;
         font-size: 1.8rem;
-        padding: 1rem 2rem;
+        padding-left: 2.4rem;
+        padding-block: 1.6rem;
         background-color: #494949;
         &::placeholder {
           color: rgba(white, 0.2);
@@ -43,6 +52,9 @@
           background-color: white;
         }
       }
+    }
+    & button {
+      width: 80%;
     }
   }
 }

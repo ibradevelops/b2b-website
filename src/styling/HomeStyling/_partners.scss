@@ -1,8 +1,16 @@
 .partners__section {
-  padding-block: 8rem;
-  border-top: 0.05rem solid rgba($grey-color, 0.2);
-
+  padding-block: 6rem;
+  padding-inline: 8rem;
   background-color: white;
+
+  &-line {
+    margin-bottom: 6rem;
+    width: 97.5%;
+    height: 0.2rem;
+    margin-inline: auto;
+    background: rgba($grey-color, 0.1);
+  }
+
   &-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -11,6 +19,7 @@
     &-photo {
       width: auto;
       height: 5rem;
+      cursor: pointer;
     }
   }
   &-title {

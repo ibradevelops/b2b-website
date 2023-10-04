@@ -11,6 +11,14 @@ import AreaList from "../components/AreaComponents/AreaList";
 import AreaText from "../components/AreaComponents/AreaText";
 import AreaContent from "../components/AreaComponents/AreaContent";
 import AreaApplicationItems from "../components/GlobalComponents/AreaApplicationItems";
+import AreaCarousel from "../components/AreaComponents/AreaCarousel";
+//
+const breakPoints = [
+  { width: 550, itemsToShow: 1 },
+  { width: 768, itemsToShow: 2 },
+  { width: 1200, itemsToShow: 3 },
+];
+
 //
 function AreaLayout({
   imageOne,
@@ -55,7 +63,8 @@ function AreaLayout({
         )}
         {!textOne && !textTwo && !texts.length && <AreaList list={list} />}
       </AreaContent>
-      <AreaApplicationItems />
+      {/* <AreaApplicationItems /> */}
+      <AreaCarousel />
     </section>
   );
 }

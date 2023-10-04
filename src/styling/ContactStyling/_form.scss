@@ -20,8 +20,9 @@
   }
   // button
   & button {
-    width: 100%;
     border: 0.2rem solid $red-dark-color;
+    margin-left: auto;
+    width: 33.3%;
     &:hover,
     &:active {
       background-color: transparent;

@@ -2,9 +2,10 @@
   &__header {
     position: relative;
     &-img {
-      width: 100%;
+      width: 100vw;
       height: 35rem;
       object-fit: cover;
+      margin-left: calc(50% - 50vw);
     }
     &-box {
       position: absolute;

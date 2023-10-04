@@ -17,6 +17,12 @@ function Footer() {
             textTwo={"b2b@b2b.ba"}
             textThree={"+387 33 838 929"}
             textFour={"+387 62 990 910"}
+            textFive={""}
+            navigateOne={""}
+            navigateTwo={""}
+            navigateThree={""}
+            navigateFour={""}
+            navigateFive={""}
           />
           <address className="footer__right-box-first-address">
             Branilaca Sarajeva 27, 71000 Sarajevo, BiH
@@ -28,8 +34,14 @@ function Footer() {
             order={"second"}
             textOne={"Početna"}
             textTwo={"Područja primjene"}
-            textThree={"Kontakt"}
-            textFour={"LOG IN"}
+            textThree={"Implementacija"}
+            textFour={"Kontakt"}
+            textFive={"LOG IN"}
+            navigateOne={"/home"}
+            navigateTwo={"/order"}
+            navigateThree={"/implementation"}
+            navigateFour={"/contact"}
+            navigateFive={"/login"}
           />
         </div>
       </div>

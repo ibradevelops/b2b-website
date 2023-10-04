@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Kruznice from "../images/kruznice.svg";
 import Logo from "../images/logo.svg";
 import Button from "../components/HomeComponents/Button";
 
@@ -9,7 +10,14 @@ function LoginLayout() {
   }, []);
   //
   return (
-    <section className="login">
+    <section
+      className="login"
+      style={{
+        backgroundImage: `url(${Kruznice})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <img className="login__logo" alt="Logo" src={Logo} />
       <form className="login__form">
         <p className="login__form-sub-title">Dobrodošli natrag</p>

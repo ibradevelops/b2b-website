@@ -12,9 +12,12 @@ function Who() {
       <div className="whoAreWe__section-box">
         <div className="whoAreWe__section-box-label">
           <p className="whoAreWe__section-box-label-title">Ko smo mi?</p>
-          <h2 className="whoAreWe__section-box-label-sub-title">
-            Mi vam olakšavamo posao
-          </h2>
+          <div>
+            <h2 className="whoAreWe__section-box-label-sub-title">
+              Mi vam olakšavamo posao
+            </h2>
+            <div className="whoAreWe-line"></div>
+          </div>
         </div>
         <div className="whoAreWe__section-box-text">
           <p>

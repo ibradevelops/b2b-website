@@ -6,13 +6,16 @@ import Implementation from "../components/HomeComponents/Implementation.js";
 import Introduction from "../components/HomeComponents/Introduction.js";
 import Results from "../components/HomeComponents/Results.js";
 import Who from "../components/HomeComponents/Who.js";
+import PartnersCarousel from "../components/HomeComponents/PartnersCarousel";
 import Partners from "../components/HomeComponents/Partners.js";
 import Support from "../components/HomeComponents/Support.js";
-
-function HomeLayout() {
+//
+//
+function HomeLayout({ setToggleHamburger }) {
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    setToggleHamburger(false);
+  }, [setToggleHamburger]);
   return (
     <>
       <Intro />
@@ -22,7 +25,7 @@ function HomeLayout() {
       <Introduction />
       <Results />
       <Who />
-      <Partners />
+      <PartnersCarousel />
       <Support />
     </>
   );

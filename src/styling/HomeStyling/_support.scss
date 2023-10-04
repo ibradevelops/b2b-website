@@ -3,9 +3,9 @@
   background-color: $red-light-color;
   &-sub-title {
     @include sectionLabel;
-    text-align: center;
     color: $red-dark-color;
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
   }
   &-box {
     display: flex;
