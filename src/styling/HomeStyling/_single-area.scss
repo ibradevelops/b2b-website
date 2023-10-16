@@ -11,7 +11,6 @@
 
   &-figure {
     margin-inline: auto;
-    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -21,22 +20,20 @@
     &-img {
       height: 10rem;
       width: auto;
+      margin-right: auto;
     }
     &-caption {
       font-size: 2rem;
       font-weight: 600;
     }
     &-text {
-      text-align: center;
       font-size: 1.4rem;
       opacity: 0.8;
     }
   }
   &-link {
-    margin-inline: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 1rem;
     font-size: 1.4rem;
     color: $red-dark-color;

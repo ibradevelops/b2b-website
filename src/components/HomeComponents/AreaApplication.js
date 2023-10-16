@@ -1,5 +1,6 @@
 import useObserver from "../../hooks/useObserver";
 import AreaApplicationItems from "../GlobalComponents/AreaApplicationItems";
+import Scroll from "../GlobalComponents/Scroll";
 
 function AreaApplication() {
   const { element, visibility, animate } = useObserver();
@@ -16,6 +17,9 @@ function AreaApplication() {
         Za svaki aspekt vašeg poslovanja
       </h2>
       <AreaApplicationItems />
+      <Scroll className={"scroll-grey"} areaPosition={"area-position"}>
+        Scroll
+      </Scroll>
     </section>
   );
 }

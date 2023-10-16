@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MenuLayout from "../../layouts/MenuLayout";
 import DropdownBar from "./DropdownBar";
 //
@@ -16,20 +16,26 @@ function Navbar({
 }) {
   const [toggleIconColor, setToggleIconColor] = useState(false);
   //
+  const navigate = useNavigate();
+  //
   return (
     <div
       style={{
         position: "sticky",
         top: "0",
-        zIndex: "9999",
+        zIndex: "9999999",
         width: "100vw",
         marginLeft: "calc(50% - 50vw)",
+        backgroundColor: "#262629",
       }}
     >
       <nav className="nav">
-        <Link to="/home">
-          <img className="nav__logo" src={Logo} alt="Logo" />
-        </Link>
+        <img
+          className="nav-logo"
+          src={Logo}
+          alt="Logo"
+          onClick={() => navigate("/home")}
+        />
         <img
           className="nav-menu-img"
           src={HamburgerMenu}
@@ -40,6 +46,9 @@ function Navbar({
           }}
         />
         <ul className="nav__list">
+          <Link to="/home">
+            <img className="nav__logo" src={Logo} alt="Logo" />
+          </Link>
           <Link to="/home">
             <li className="nav__list-item">Početna</li>
           </Link>

@@ -2,9 +2,12 @@
   padding-block: 2rem;
   background-color: $grey-color !important;
   display: flex;
-  justify-content: center;
-  gap: 32rem;
-
+  justify-content: space-between;
+  max-width: 130rem;
+  margin-inline: auto;
+  &-logo{
+    display:none;
+  }
   a {
     text-decoration: none;
   }
@@ -24,7 +27,8 @@
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 7rem;
+    justify-content: space-between;
+    width: 100%;
     &-item {
       color: white;
       font-size: 1.5rem;

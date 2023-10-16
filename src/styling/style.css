@@ -122,8 +122,12 @@ body {
   padding-block: 2rem;
   background-color: #262629 !important;
   display: flex;
-  justify-content: center;
-  gap: 32rem;
+  justify-content: space-between;
+  max-width: 130rem;
+  margin-inline: auto;
+}
+.nav-logo {
+  display: none;
 }
 .nav a {
   text-decoration: none;
@@ -142,7 +146,8 @@ body {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 7rem;
+  justify-content: space-between;
+  width: 100%;
 }
 .nav__list-item {
   color: white;
@@ -201,6 +206,61 @@ body {
   color: white;
 }
 
+.scroll-white {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transform: rotate(90deg);
+  right: 0;
+  bottom: 20rem;
+}
+.scroll-white::before {
+  content: "";
+  transform: inherit;
+  position: absolute;
+  top: -2.5rem;
+  left: -6rem;
+  background-color: white;
+  width: 0.1rem;
+  height: 6rem;
+}
+
+.scroll-grey {
+  position: absolute;
+  color: #262629;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transform: rotate(90deg);
+  right: 0;
+  bottom: 20rem;
+}
+.scroll-grey::before {
+  content: "";
+  transform: inherit;
+  position: absolute;
+  top: -2.5rem;
+  left: -6rem;
+  background-color: #262629;
+  width: 0.1rem;
+  height: 6rem;
+}
+
+.area-position {
+  bottom: 12rem;
+  right: 2rem;
+}
+
+.implementation-position {
+  right: 8rem;
+  bottom: 10rem;
+}
+
+.partners-position {
+  bottom: 8rem;
+  right: 2rem;
+}
+
 .intro__section {
   position: relative;
   height: inherit;
@@ -209,6 +269,8 @@ body {
   padding-block: 16rem 32rem;
   margin-top: 8rem;
   backface-visibility: hidden;
+  max-width: 130rem;
+  margin-inline: auto;
 }
 .intro__section-text {
   display: flex;
@@ -234,42 +296,25 @@ body {
 }
 .intro__section-photo {
   position: relative;
+  left: -10rem;
 }
 .intro__section-photo img {
   height: 40rem;
   width: auto;
+  position: relative;
+  left: -10rem;
 }
 .intro__section-photo-bio {
   opacity: 0.1;
   color: gray;
   position: absolute;
-  top: 16rem;
-  left: -28rem;
+  top: 14rem;
+  left: -24rem;
   z-index: -1;
   font-size: 6.8rem;
   letter-spacing: 1.8rem;
   font-weight: 900;
   line-height: 1;
-}
-.intro__section-scroll {
-  position: absolute;
-  color: white;
-  opacity: 0.75;
-  text-transform: uppercase;
-  font-size: 1rem;
-  transform: rotate(90deg);
-  right: 0;
-  bottom: 20rem;
-}
-.intro__section-scroll::before {
-  content: "";
-  transform: inherit;
-  position: absolute;
-  top: -2.5rem;
-  left: -6rem;
-  background-color: white;
-  width: 0.1rem;
-  height: 6rem;
 }
 
 .main-btn {
@@ -294,6 +339,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-block: 4rem;
+  position: relative;
 }
 .areaApplication__section-sub-title {
   font-size: 1.4rem;
@@ -308,7 +355,7 @@ body {
   color: #262629;
 }
 .areaApplication__section-items {
-  padding: 8rem 12rem;
+  padding-block: 4rem;
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(4, 1fr);
@@ -327,7 +374,6 @@ body {
 }
 .singleArea__item-figure {
   margin-inline: auto;
-  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -337,21 +383,19 @@ body {
 .singleArea__item-figure-img {
   height: 10rem;
   width: auto;
+  margin-right: auto;
 }
 .singleArea__item-figure-caption {
   font-size: 2rem;
   font-weight: 600;
 }
 .singleArea__item-figure-text {
-  text-align: center;
   font-size: 1.4rem;
   opacity: 0.8;
 }
 .singleArea__item-link {
-  margin-inline: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
   font-size: 1.4rem;
   color: #cc2036;
@@ -411,6 +455,7 @@ body {
   padding-block: 22rem;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .implementation__section-title {
   text-align: left;
@@ -558,6 +603,7 @@ body {
   padding-block: 6rem;
   padding-inline: 8rem;
   background-color: white;
+  position: relative;
 }
 .partners__section-line {
   margin-bottom: 6rem;
@@ -668,7 +714,6 @@ body {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   color: #cc2036;
-  font-weight: bold;
   text-decoration: underline;
 }
 .footer__right-box-first-address {
@@ -754,36 +799,51 @@ body {
   font-family: inherit;
 }
 
-@media (max-width: 82em) {
+@media (max-width: 93.75em) {
+  .intro__section {
+    flex-direction: column;
+    position: relative;
+  }
+  .intro__section-text {
+    z-index: 9999;
+  }
+  .intro__section-text-bio {
+    width: 60%;
+  }
+  .intro__section-photo {
+    position: absolute;
+    top: 52.5%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+  }
+  .intro__section-photo img {
+    height: 35rem;
+  }
+  .areaApplication__section {
+    max-width: 100rem;
+    margin-inline: auto;
+  }
+  .areaApplication__section-items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 88.75em) {
   .nav {
-    padding-inline: 6rem;
+    padding-inline: 2rem 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 100rem;
+    margin-inline: auto;
   }
-  .nav__logo {
-    height: 8rem;
+  .nav-logo {
+    display: block;
   }
   .nav__list {
     display: none;
   }
   .nav-menu-img {
     display: block;
-  }
-  .intro__section {
-    flex-direction: column;
-  }
-  .intro__section-text {
-    align-items: center;
-  }
-  .intro__section-text-bio {
-    text-align: center;
-  }
-  .intro__section-photo {
-    display: none;
-  }
-  .intro__section-scroll {
-    display: none;
   }
 }
 @media (max-width: 74em) {
@@ -792,14 +852,26 @@ body {
   }
   .specialModules__section-items {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .specialModules__section-title {
     text-align: center;
     margin-left: 0;
   }
-  .specialModues__section-items-figure:last-child {
-    grid-column: -4/-1;
+  .intro__section {
+    margin-block-start: 0;
+    padding-block-start: 12rem;
+  }
+  .intro__section-photo {
+    top: 65%;
+    left: 70%;
+  }
+  .areaApplication__section {
+    max-width: initial;
+    margin-inline: initial;
+  }
+  .areaApplication__section-items {
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .whoAreWe__section-box {
     flex-direction: column;
@@ -822,6 +894,9 @@ body {
   .areaApplication__section-items {
     grid-template-columns: repeat(3, 1fr);
   }
+  .implementation__section button {
+    margin-left: 15rem;
+  }
 }
 @media (max-width: 64.5em) {
   .results__section {
@@ -842,44 +917,73 @@ body {
   html {
     font-size: 52%;
   }
+  .areaApplication__section-items {
+    grid-template-columns: 1fr 1fr;
+  }
   .partners__section-gallery {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 6rem;
     -moz-column-gap: 0;
          column-gap: 0;
   }
+  .implementation__section button {
+    margin-left: 12rem;
+  }
 }
 @media (max-width: 51.25rem) {
+  .intro__section {
+    padding-block: 16rem 62rem;
+  }
   .intro__section-text {
-    gap: 1.2rem;
+    position: absolute;
+    width: 90%;
+    top: 0;
+    gap: 1rem;
+  }
+  .intro__section-text-title {
+    font-size: 8.4rem;
   }
   .intro__section-text-bio {
-    width: 100%;
+    width: 95%;
   }
-  .specialModules__section-items {
-    grid-template-columns: repeat(2, 1fr);
+  .intro__section-photo {
+    left: 60%;
   }
-  .specialModues__section-items-figure:last-child {
-    grid-column: initial;
+  .intro__section-photo-bio {
+    font-size: 5.2rem;
+    top: 18rem;
+    left: -18rem;
   }
   .implementation__section-text {
     font-size: 2.4rem;
   }
 }
 @media (max-width: 47.5em) {
+  .nav-logo {
+    height: 6rem;
+  }
+  .nav-menu-img {
+    height: 2rem;
+  }
   .intro__section-text-title {
-    font-size: 5.2rem;
+    font-size: 6.4rem;
   }
   .areaApplication__section {
     overflow: hidden;
   }
   .areaApplication__section-items {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     align-content: center;
   }
   .results__section {
     display: flex;
     flex-direction: column;
+  }
+  .results__section-single-text {
+    font-size: 2.6rem;
+  }
+  .partners__section {
+    display: none;
   }
   .support__section {
     padding-block: 6rem;
@@ -900,11 +1004,48 @@ body {
   }
   .introduction__section-text {
     width: 85%;
+    line-height: 2;
+  }
+  .specialModules__section-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 6rem;
+  }
+  .footer__right-box {
+    align-items: center;
+    text-align: center;
+    gap: 6rem;
+  }
+  .footer__right-box-first-list {
+    align-items: center;
+  }
+  .footer__right-box-second-list {
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  .implementation__section button {
+    margin-left: 10rem;
   }
 }
-@media (max-width: 37.5rem) {
+@media (max-width: 37.5em) {
+  .intro__section-text {
+    gap: 2rem;
+  }
+  .intro__section-text-sub-title {
+    font-size: 1.8rem;
+  }
+  .intro__section-photo {
+    left: 65%;
+  }
+  .intro__section-photo-bio {
+    font-size: 4.6rem;
+  }
   html {
-    font-size: 48%;
+    font-size: 50%;
   }
   .menu__overlay-images-icon {
     height: 8rem;
@@ -918,43 +1059,31 @@ body {
   .support__section-box-left {
     gap: 3.2rem;
   }
-  .footer {
-    flex-direction: column;
-    gap: 6rem;
-  }
-  .footer__right-box {
-    align-items: center;
-    text-align: center;
-    gap: 6rem;
-  }
-  .footer__right-box-first-list, .footer__right-box-second-list {
-    gap: 3.2rem;
-  }
-  .footer__right-box-first-list {
-    align-items: center;
+  .implementation__section button {
+    margin-left: 7.5rem;
   }
 }
 @media (max-width: 30em) {
-  .nav {
-    justify-content: center;
-    padding-inline: 0;
+  .intro__section-photo img {
+    height: 32rem;
   }
-  .nav img {
-    position: relative;
-    left: -8rem;
+  .intro__section-text {
+    padding-top: 4rem;
   }
-  .nav a {
-    position: relative;
-    right: -12rem;
+  .intro__section-photo {
+    left: 65%;
+    top: 75%;
+    padding-top: 4rem;
+  }
+  .intro__section-photo-bio {
+    font-size: 3.4rem;
+    left: -12rem;
   }
   .menu__overlay-list-item {
     font-size: 2rem;
   }
   .menu__overlay-list-item:not(:last-child) {
     margin-bottom: 4rem;
-  }
-  .intro__section-text-title {
-    font-size: 3.6rem;
   }
   .areaApplication__section-items {
     display: flex;
@@ -963,52 +1092,79 @@ body {
   .areaApplication__section-title {
     font-size: 2.6rem;
   }
-  .singleArea__item-figure {
-    width: 100%;
-  }
-  .specialModules__section-items {
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
-  }
   .implementation__section {
-    text-align: center;
-    align-items: center;
+    padding-block: 16rem;
     gap: 2rem;
   }
   .implementation__section-title {
-    margin-left: 0;
+    margin-left: 2rem;
   }
   .implementation__section-text {
     margin-inline: auto;
-    margin-left: 0;
+    text-align: left;
+    font-size: 2.4rem;
+    line-height: 2;
   }
   .implementation__section-text::after {
     content: "";
     display: none;
   }
-  .implementation__section button {
-    margin-left: 0;
+  .implementation__section a button {
+    margin-left: 5rem;
+    width: 24rem;
   }
   .partners__section-gallery img {
     height: 4rem;
   }
+  .footer {
+    padding-inline: 4rem;
+    gap: 2rem;
+  }
+  .footer__left-box {
+    align-items: flex-start;
+  }
+  .footer__left-box-title {
+    font-size: 3.2rem;
+  }
+  .footer__right-box {
+    align-items: flex-start;
+  }
+  .footer__right-box-first-title {
+    text-align: left;
+    font-size: 1.6rem;
+  }
+  .footer__right-box-first-list {
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .footer__right-box-first-list-item {
+    font-size: 2rem;
+  }
+  .footer__right-box-first-address {
+    font-size: 1.8rem;
+  }
+  .footer__right-box-second-list {
+    padding: 0;
+  }
+  .footer__right-box-second-list-item {
+    font-size: 2rem;
+  }
+  .footer__right-box-second-title {
+    text-align: left;
+  }
 }
 @media (max-width: 24.375em) {
-  html {
-    font-size: 44%;
-  }
-  .intro__section-text {
-    gap: 2.4rem;
-  }
-  .intro__section-text-title {
-    font-size: 2.8rem;
+  .intro__section-photo img {
+    height: 30rem;
   }
   .areaApplication__section-title {
     font-size: 2.4rem;
   }
   .implementation__section-text {
     margin-left: 5rem;
+  }
+  .results__section-single-text {
+    font-size: 2.2rem;
   }
 }
 .area__main {
@@ -1185,10 +1341,17 @@ body {
 }
 
 .area__carousel {
-  padding: 8rem;
-  padding-top: 12rem;
+  padding-block: 8rem;
 }
 
+@media (max-width: 66.25em) {
+  .area__questions-single:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .area__questions-line {
+    display: none;
+  }
+}
 @media (max-width: 61.25em) {
   .area__intro {
     text-align: center;
@@ -1212,40 +1375,59 @@ body {
 }
 @media (max-width: 42.5em) {
   .area__questions {
-    padding-top: 12rem;
+    padding-top: 20rem;
+  }
+  .area__questions-single:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .area__intro-sub-title {
+    font-size: 2rem;
+    font-weight: 500;
   }
   .area__box {
     width: 58rem;
     gap: 2rem;
+    align-items: center;
   }
   .area__box-text {
-    font-size: 1.8rem;
+    font-size: 2.6rem;
   }
 }
 @media (max-width: 36.25em) {
   .area__intro-title {
-    font-size: 5.6rem;
+    font-size: 5.2rem;
   }
   .area__box {
     width: 50rem;
+    flex-direction: column;
   }
   .area__box-text {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
+    text-align: center;
   }
   .area__questions {
     padding-inline: 8rem;
   }
 }
 @media (max-width: 30em) {
+  .area__main-header {
+    top: 85%;
+  }
+  .area__box {
+    width: 44rem;
+  }
   .area__questions,
   .area__content,
   .areaApplication__section-items {
     padding-inline: 6rem;
   }
+  .area__questions {
+    padding-top: 26rem;
+  }
 }
 @media (max-width: 23.75em) {
   .area__box {
-    width: 44rem;
+    width: 42rem;
   }
   .area__intro-sub-title {
     font-size: 2rem;
@@ -1414,7 +1596,7 @@ body {
 .contact__form button {
   border: 0.2rem solid #cc2036;
   margin-left: auto;
-  width: 33.3%;
+  width: 50%;
 }
 .contact__form button:hover, .contact__form button:active {
   background-color: transparent;
@@ -1531,7 +1713,7 @@ body {
   .login__form-box {
     gap: 4rem;
   }
-  .login__form-box input, .login__form-box button {
+  .login__form-box input {
     width: calc(100% + 10rem);
   }
 }/*# sourceMappingURL=style.css.map */

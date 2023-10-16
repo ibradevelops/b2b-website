@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Scroll from "../GlobalComponents/Scroll.js";
 import Button from "./Button.js";
 import Image from "../../images/image.svg";
 import Kruznice from "../../images/kruznice.svg";
@@ -36,7 +37,7 @@ function Intro() {
           <h2>SOFTWARE</h2>
         </div>
       </div>
-      <p className="intro__section-scroll">Scroll</p>
+      <Scroll className={"scroll-white"}>Scroll</Scroll>
     </header>
   );
 }

@@ -21,6 +21,7 @@ import Partner18 from "../../images/partner-18.png";
 import Partner19 from "../../images/partner-19.png";
 import Partner20 from "../../images/partner-20.png";
 import Partner21 from "../../images/partner-21.png";
+import Scroll from "../GlobalComponents/Scroll";
 // partner 2 deleted
 
 const images = [
@@ -56,7 +57,7 @@ const breakPoints = [
 function PartnersCarousel() {
   return (
     <div className="partners__section">
-      <div className="partners__section-line"></div>
+      {/* <div className="partners__section-line"></div> */}
       <Carousel breakPoints={breakPoints} pagination={false}>
         {images.map((val) => (
           <img
@@ -67,6 +68,9 @@ function PartnersCarousel() {
           />
         ))}
       </Carousel>
+      <Scroll className={"scroll-grey"} partnersPosition={"partners-position"}>
+        Scroll
+      </Scroll>
     </div>
   );
 }

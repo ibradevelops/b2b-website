@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
 import useObserver from "../../hooks/useObserver";
+import Scroll from "../GlobalComponents/Scroll";
 
 function Implementation() {
   const { element, visibility, animate } = useObserver();
@@ -20,6 +21,12 @@ function Implementation() {
       <Link to="/implementation">
         <Button>Saznaj više</Button>
       </Link>
+      <Scroll
+        className={"scroll-white"}
+        implementationPosition={"implementation-position"}
+      >
+        Scroll
+      </Scroll>
     </section>
   );
 }
